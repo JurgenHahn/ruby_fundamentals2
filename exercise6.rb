@@ -1,17 +1,16 @@
-
-
+def print_list(list)
+  list.each do |item|
+    puts "* " + item
+  end
+end
 
 grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 
-grocery_list.each do |item|
-  puts "* " + item
-end
+print_list(grocery_list)
 
 grocery_list.push("rice")
 
-grocery_list.each do |item|
-  puts "* " + item
-end
+print_list(grocery_list)
 
 puts "We currently have #{grocery_list.count} items on our list."
 
@@ -25,12 +24,8 @@ puts "The second item on our list is #{grocery_list[1]}."
 
 grocery_list = grocery_list.sort
 
-grocery_list.each do |item|
-  puts "* " + item
-end
+print_list(grocery_list)
 
 grocery_list.delete("salmon")
 
-grocery_list.each do |item|
-  puts "* " + item
-end
+print_list(grocery_list)
